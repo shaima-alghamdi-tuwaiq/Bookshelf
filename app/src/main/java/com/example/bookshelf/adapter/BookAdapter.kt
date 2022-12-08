@@ -15,6 +15,7 @@ class BookAdapter(private val context: Context,
                   private val dataset : List<Book>)
     : RecyclerView.Adapter<BookAdapter.ViewHolder>() { // End of BookAdapter
 
+
     // TODO [3] Implement Adapter override methods
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemLayout = LayoutInflater.from(parent.context)
@@ -28,6 +29,7 @@ class BookAdapter(private val context: Context,
         holder.bookImage.setImageResource(item.bookImage)
     }
 
+    // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataset.size
 
     // TODO [2] Implement ViewHolder Class
