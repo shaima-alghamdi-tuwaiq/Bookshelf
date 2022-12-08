@@ -13,14 +13,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Initialize data.
         val datset = Datasource().loadBooks()
 
         val recyclerView = findViewById<RecyclerView>(R.id.rv_books)
-
         val adapter = BookAdapter(this, datset)
-
         recyclerView.adapter = adapter
 
+        // Use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true)
 
     }
